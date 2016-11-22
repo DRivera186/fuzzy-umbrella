@@ -1,0 +1,59 @@
+<div ng-controller='userController'>
+  <h2 class="center2">Login  /   Reg</h2>
+  <p class="error" ng-repeat="error in loginerrors">{{error}}</p>
+  <p class="error" ng-repeat="error in errors" ng-bind="error.message"></p>
+  <div class="row">
+      <div class="col s4 down">
+          <h3 class="center">Login</h3>
+          <p class="error"></p>
+          <form class="funForm">
+              <div class="formGroup">
+                  <label>Email:</label>
+                  <input type="email" ng-model="log.email">
+              </div>
+              <div class="formGroup">
+                  <label>Password:</label>
+                  <input type="password" name="password" ng-model="log.password" value="">
+              </div>
+              <input class="btn" type="submit" ng-click="login(log)" value="Login">
+          </form>
+      </div>
+      <div class="divider col"></div>
+      <div class="col s4 center">
+          <p class="error" ng-repeat="error in errors">{{error}}</p>
+          <h3 class="center">Register</h3>
+          <form class="funForm" ng-submit="register(newUser)" name="reg">
+              <div class="formGroup">
+                  <label>Name:</label>
+                  <input class=".center-align" type="text" ng-model="newUser.name">
+              </div>
+              <div class="formGroup">
+                  <label>Email:</label>
+                  <input type="email" ng-model="newUser.email">
+              </div>
+              <div class="formGroup">
+                  <label>Password:</label>
+                  <input type="password" ng-model="newUser.password" name="password" ng-minlength='6'>
+                  <div> 
+                      <span style="color:red; font-size: 1.5em;" ng-show="reg.password.$error.minlength"> 
+                          Password must be 6+ characters long!
+                      </span>
+                  </div>
+              </div>
+              <div class="formGroup">
+                  <label>Confirm Password:</label>
+                  <input type="password" ng-model="newUser.pw_confirm">
+                  <div>
+                      <span style="color:red; font-size: 1.5em;" ng-show="newUser.password !== newUser.pw_confirm">
+                          Passwords Must Match!
+                      </span>
+                  </div>
+              </div><br>
+              <input class="btn" type="submit" value="Register">
+          </form>
+      </div>
+  </div>
+</div>
+
+
+

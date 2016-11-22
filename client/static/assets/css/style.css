@@ -1,0 +1,116 @@
+* {
+font-family: 'Indie Flower', cursive;
+
+}
+.square{
+    border: 1px solid black;
+    padding-left: 30px; 
+}
+.size {
+    font-size: 2em;
+}
+
+.center2 {
+    margin-left: 34% !important;
+}
+
+.container {
+/*    border: 1px solid black;*/
+    padding-left: 97px !important;
+    padding-bottom: 30px !important;    
+}
+.down {
+    margin-top: 100px;
+}
+
+.messages {
+  font-size: smaller;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  color: red;
+}
+
+.btn2 {
+    font-size: 2em;
+    margin-top: 30px;
+}
+
+label {
+    font-size: 2em;
+}
+input {
+    font-size: 1.5em !important;
+    margin-bottom: 20px !important;
+}
+
+.success {
+    background: green;
+    border:none;
+}
+.fail {
+    background: red;
+}
+.plain {
+    background: dodgerblue;
+}
+table {
+    border:1px solid silver;
+    border-collapse: collapse;
+}
+thead {
+    border-bottom: 1px solid #d0d0d0;
+    text-align: left;
+}
+td {
+    margin:7px;
+    width:100px;
+    height:50px;
+}
+.td_name {
+    width:125px;
+}
+.error {
+    color:red;
+    font-size: 1.5em;
+}
+.divider {
+    padding: 0px !important;
+    width: 4px !important;
+    height: 700px;
+    margin: 0 153px;
+    margin-left:140px;
+   background-color: #26a69a;
+}
+
+.right{
+    float:right;
+}
+.left{
+    float:left;
+}
+.underBorder {
+    border-bottom:1px solid silver;
+}
+textarea {
+    width:100%;
+}
+.three {
+    width:27.5%;
+    display:inline-block;
+    vertical-align:top ;
+}
+.four {
+    width:37.5%;
+    margin:0 1%;
+    display:inline-block;
+    vertical-align:top ;
+}
+.six {
+    width:57.5%;
+    margin:0 1%;
+    display:inline-block;
+    vertical-align:top ;
+}
+.offsetTwo{
+    margin-left:19%;
+}
