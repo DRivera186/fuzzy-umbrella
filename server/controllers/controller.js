@@ -1,5 +1,5 @@
 var mongoose = require('mongoose');
-var User = mongoose.model('user');//change example to what you desire
+var User = mongoose.model('user');
 var Question = mongoose.model('question')
 module.exports = {
   index: function(req,res){
