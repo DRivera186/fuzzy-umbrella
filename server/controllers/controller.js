@@ -22,12 +22,18 @@ module.exports = {
   login: function(req,res){
     console.log('<--------------I got to LogIn-------------------->'.red);
     User.findOne({email:req.body.email}, function(err, user){
-      if(req.body.password == user.password){
+      console.log(req.body.email.red);
+      if(user) {
+        if(req.body.password == user.password){
         req.session.user = user;
         res.redirect('/main')
       }else{
         res.status(401).send("Login failed");
       }
+    }else{
+      res.status(401).send("User Does not Exist, Please Register or Try Again!");
+    }
+    
     })
   },
   logout: function(req,res){
