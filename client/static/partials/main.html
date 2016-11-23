@@ -14,7 +14,7 @@
     </thead>
 
     <tbody>
-      <tr ng-repeat="question in allquestions |orderBy:'-created_at'| filter:questionFilter track by $index">
+      <tr ng-repeat="question in allquestions |orderBy:'-answers'| filter:questionFilter track by $index">
         <td>{{question.question}}</td>
         <td>{{question.answers.length}}</td>
         <td><a href="#/show/{{question._id}}" class="btn">Show</a> |  <a href="#/answer/{{question._id}}" class="btn">Answer</a></td>
