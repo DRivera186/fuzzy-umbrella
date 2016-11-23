@@ -21,7 +21,7 @@ module.exports = {
   },
   login: function(req,res){
     console.log('<--------------I got to LogIn-------------------->'.red);
-    User.findOne({email:req.body.name}, function(err, user){
+    User.findOne({email:req.body.email}, function(err, user){
       if(req.body.password == user.password){
         req.session.user = user;
         res.redirect('/main')
