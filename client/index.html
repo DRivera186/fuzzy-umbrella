@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <title>Freedom</title>
+    <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+    <script>
+      zingchart.MODULESDIR = "https://cdn.zingchart.com/modules/";
+      ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "ee6b7db5b51705a13dc2339db3edaf6d"];
+    </script>
+    <style>
+      @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    </style>
+
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Vidaloka" rel="stylesheet">
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/controllers/sessionsController.js"></script>
+    <script src="assets/controllers/formulaController.js"></script>
+    <script src="assets/controllers/usersController.js"></script>
+    <script src="assets/factories/userFactory.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    
+    
+    <nav class="nav-side nav-open" >
+        <div class="money"><img src="money.jpg" alt=""></div>
+       <div class="topper"><h3>Side Menu</h3></div> 
+        <a href="#" class="nav-toggle"></a><br>
+        <a href="#/home"><div class="colored"><h4>Home</h4></div></a>
+        <a href="#/car"><div class="colored"><h4>Car Loan</h4></div></a>
+        <a href="#/house"><div class="colored"><h4>House Loan</h4></div></a>
+        <a href="#/budget"><div class="colored2"><h4>Personal Budget</div></h4></a>
+    </nav>
+
+
+    <div ng-view>
+   
+    </div>
+    <footer class="page-footer darken2">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Contact Us</h5>
+            <p class="grey-text text-lighten-4">"It's not your salary that makes your right, it's your spending habits"<br> -Charles A. Jaffe</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Financial Freedom</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Free yourself of debt</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Life Insurance, because life happens</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Coding Dojo Rules</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Eduardo ?</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 Copyright Req That Body
+        <a class="grey-text text-lighten-4 right" href="#!">Easter Eggs</a>
+        </div>
+      </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        
+        $('.nav-side .nav-toggle').on('click', function(e) {
+            e.preventDefault();
+            $(this).parent().toggleClass('nav-open');
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function(){
+      $('.slider').slider({full_width: true});
+    });
+    </script>
+
+
+</body>
+</html>

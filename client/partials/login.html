@@ -1,0 +1,64 @@
+<!-- <div id="para">
+    
+</div> -->
+<div id="back">
+    <div class="container2">
+<!--         <h2 class="center2 white-text">Polaris</h2> -->
+<img class="logo1" src="logo2.png" alt="">
+        <p class="error" ng-repeat="error in errors" ng-bind="error.message"></p>
+        <div class="row">
+            <div class="col s4 down">
+                <h3 class="center white-text">Login</h3>
+                <p class="error"></p>
+                <form class="funForm white-text" ng-submit="login(user)">
+                    <div class="formGroup">
+                        <label>Email:</label>
+                        <input type="email" ng-model="user.email">
+                    </div>
+                    <div class="formGroup">
+                        <label>Password:</label>
+                        <input type="password" ng-model="user.password">
+                    </div>
+                    <input class="btn" type="submit" value="Login">
+                </form>
+            </div>
+            <div class="divider col"></div>
+            <div class="col s4 center">
+                <h3 class="center white-text">Register</h3>
+                <form class="funForm white-text" ng-submit="register(newUser)" name="reg">
+                    <div class="formGroup">
+                        <label>First Name:</label>
+                        <input class=".center-align white-text" type="text" ng-model="newUser.first_name">
+                    </div>
+                    <div class="formGroup">
+                        <label>Last Name:</label>
+                        <input class=".center-align white-text" type="text" ng-model="newUser.last_name">
+                    </div>
+                    <div class="formGroup">
+                        <label>Email:</label>
+                        <input class="white-text" type="email" ng-model="newUser.email">
+                    </div>
+                    <div class="formGroup">
+                        <label>Password:</label>
+                        <input class="white-text" type="password" ng-model="newUser.password" name="password" ng-minlength='6'>
+                        <div> 
+                            <span style="color:red; font-size: 1.5em;" ng-show="reg.password.$error.minlength"> 
+                                Password must be 6+ characters long!
+                            </span>
+                        </div>
+                    </div>
+                    <div class="formGroup">
+                        <label>Confirm Password:</label>
+                        <input type="password" ng-model="newUser.pw_confirm">
+                        <div>
+                            <span style="color:red; font-size: 1.5em;" ng-show="newUser.password !== newUser.pw_confirm">
+                                Password do not match!
+                            </span>
+                        </div>
+                    </div><br>
+                    <input class="btn" type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

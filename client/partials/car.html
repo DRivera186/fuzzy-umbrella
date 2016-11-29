@@ -1,0 +1,74 @@
+<div class="container">
+<div ng-controller="usersController">
+	<div class="row underBorder">
+	    <div class="six">
+	        <h3><span ng-bind="user.first_name"></span></h3>
+	    </div>
+	    <div class="four">
+	        <a ng-click="logOut()" class="btn btn2">Log Out</a>
+	    </div>
+	</div>
+</div>
+<h1 class="center">Dream Car Estimate</h1>
+<img class="pix12 center" src="BMW.png" alt="">
+	<div ng-controller="budgetController">
+		<table class="bordered">
+		  <thead>
+		    <tr>
+		        <th data-field="id">Item</th>
+		        <th data-field="price">Expense</th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		  	<form>
+		    <tr class="trtr">
+		      <td>Car Value</td>
+		      <td>$<input type="number" ng-model="pv"/></td>
+		    </tr>
+		    <tr>
+		      <td>Down Payment (optional)</td>
+		      <td>$<input type="number" ng-model="downp"/></td>
+		    </tr>
+		    <tr>
+		      <td>APR / Rate</td>
+		      <td>%<input type="number" ng-model="apr"/></td>
+		    </tr>
+		    <tr>
+		      <td>Loan Term / Years</td>
+		      <td>yrs<input type="number" ng-model="yr"/></td>
+		    </tr>
+		  </tbody>
+		  </form>
+		</table>
+
+		<br>
+
+		<table class="bordered pushdown" ng-if=totalPayment()>
+		  <thead>
+		    <tr>
+		        <th data-field="id">Monthly Payments</th>
+		        <th data-field="price">Total Interest Paid</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td ng-if=totalPayment()><h2>Monthly Payments: {{totalPayment() | currency:"$"}}</h2></td>
+		      <td ng-if=totalInterest()><h2>Total Interest Paid: {{totalInterest() | currency:"$"}}</h2></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
+<!-- 	    <div ng-controller="budgetController">
+        <form>
+            <div> <label>Value of the Car</label> <input type="number" ng-model="pv"/></div>
+            <div> <label>Down Payment</label> <input type="number" ng-model="downp"/></div>
+            <div><label>APR</label> <input type="number" ng-model="apr"/></div>
+
+            <div> <label><b>Years</b> </label> <input type="number" ng-model="yr">
+            <p ng-if=totalPayment()>Monthly Payments: {{totalPayment() | currency:"$"}}</p>
+            <p ng-if=totalInterest()> Total Interest Paid: {{totalInterest() | currency:"$"}}</p>
+        </form>
+    </div>
+</div> -->
+</div>

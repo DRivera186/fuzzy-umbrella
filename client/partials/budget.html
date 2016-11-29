@@ -1,0 +1,61 @@
+<div class="container">
+<div ng-controller="usersController">
+	<div class="row underBorder">
+	    <div class="six">
+	        <h3><span ng-bind="user.first_name"> to your Budget Sheet</span></h3>
+	    </div>
+	    <div class="four">
+	        <a ng-click="logOut()" class="btn btn2">Log Out</a>
+	    </div>
+	</div>
+</div>
+<h1 class="center">Budget Sheet</h1>
+<img class="pix11 center" src="pix2.jpg" alt="">
+	<div ng-controller="budgetController">
+		<table class="bordered">
+		  <thead>
+		    <tr>
+		        <th data-field="id">Item</th>
+		        <th data-field="price">Expense</th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		  	<form>
+		    <tr class="trtr">
+		      <td>Income</td>
+		      <td><input type="number" ng-model="income"/></td>
+		    </tr>
+		    <tr>
+		      <td>Rent/Mortgage </td>
+		      <td>$<input type="number" ng-model="rent"/></td>
+		    </tr>
+		    <tr>
+		      <td>Utilities</td>
+		      <td>$<input type="number" ng-model="utilities"/></td>
+		    </tr>
+		    <tr>
+		      <td>Car Payment</td>
+		      <td>$<input type="number" ng-model="autoPayment"/></td>
+		    </tr>
+		  </tbody>
+		  </form>
+		</table>
+
+		<br>
+
+		<table class="bordered pushdown" ng-if=difference()>
+		  <thead>
+		    <tr>
+		        <th data-field="id">Total Expenses</th>
+		        <th data-field="price">Left Over</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		      <td ng-if=difference()><h2>{{totalExpenses()  | currency:"$"}}</h2></td>
+		      <td ng-if=difference()><h2>{{difference() | currency:"$"}}</h2></td>
+		    </tr>
+		  </tbody>
+		</table>
+	</div>
