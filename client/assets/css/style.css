@@ -14,6 +14,9 @@ font-family: 'Vidaloka', serif;
 .back1 {
     width: 58px;
 }
+.upneg {
+    margin-top: -240px;
+}
 
 #back {
      background: url(city2.gif) no-repeat center center fixed; 
