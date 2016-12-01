@@ -2,11 +2,12 @@
 <div ng-controller="usersController">
 	<div class="row underBorder">
 	    <div class="six">
-	        <h3><span ng-bind="user.first_name"> to your Budget Sheet</span></h3>
+	        <h3><span ng-bind="user.first_name"></span> Start Budgeting!</h3>
 	    </div>
 	    <div class="four">
-	        <a ng-click="logOut()" class="btn btn2">Log Out</a>
+	        <a ng-click="logOut()" class="btn btn3">Log Out</a>
 	    </div>
+	    <img src="back.jpg" ng-click="goBack()" class="back1">
 	</div>
 </div>
 <h1 class="center">Budget Sheet</h1>
@@ -22,9 +23,9 @@
 
 		  <tbody>
 		  	<form>
-		    <tr class="trtr">
+		    <tr class="trtr2">
 		      <td>Income</td>
-		      <td><input type="number" ng-model="income"/></td>
+		      <td>$<input type="number" ng-model="income"/></td>
 		    </tr>
 		    <tr>
 		      <td>Rent/Mortgage </td>

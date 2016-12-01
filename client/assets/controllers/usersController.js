@@ -18,5 +18,9 @@ app.controller('usersController', ['$scope','userFactory', '$routeParams','$loca
         $location.url('/');
     }
 
+    $scope.goBack = function() {
+      window.history.back();
+    };
+
 
 }]);

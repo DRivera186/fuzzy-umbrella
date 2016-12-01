@@ -1,6 +1,6 @@
 {
-  "name": "test_black_belt",
-  "homepage": "https://github.com/DRivera186/polaris-north",
+  "name": "fuzzy-umbrella",
+  "homepage": "https://github.com/DRivera186/fuzzy-umbrella",
   "authors": [
     "Daniel Riverae <D.Rivera186@GMail.com>"
   ],
@@ -15,7 +15,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.8",
-    "angular-route": "^1.5.8"
+    "angular": "^1.5.9",
+    "angular-route": "^1.5.9"
   }
 }

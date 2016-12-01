@@ -2,14 +2,15 @@
 <div ng-controller="usersController">
 	<div class="row underBorder">
 	    <div class="six">
-	        <h3><span ng-bind="user.first_name"></span></h3>
+	        <h3><span ng-bind="user.first_name"></span> could you afford your Dream Car?</h3>
 	    </div>
 	    <div class="four">
-	        <a ng-click="logOut()" class="btn btn2">Log Out</a>
+	        <a ng-click="logOut()" class="btn btn4">Log Out</a>
 	    </div>
+	    <img src="back.jpg" ng-click="goBack()" class="back1">
 	</div>
 </div>
-<h1 class="center">Dream Car Estimate</h1>
+<h1 class="center">Dream Car Calculator Estimate</h1>
 <img class="pix12 center" src="BMW.png" alt="">
 	<div ng-controller="budgetController">
 		<table class="bordered">

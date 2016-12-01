@@ -1,6 +1,20 @@
-<div class="container"> 
+<div class="container" style="height:1200px;">
 
-<h1>Welcome Investments</h1>
+<div ng-controller="usersController">
+	<div class="row underBorder">
+	    <div class="six">
+	        <h3>Welcome <span ng-bind="user.first_name"></span></h3>
+	    </div>
+	    <div class="four">
+	        <a ng-click="logOut()" class="btn btn2">Log Out</a>
+	    </div>
+      <img src="back.jpg" ng-click="goBack()" class="back1">
+	</div>
+</div>
+<h1 class="center">Welcome Investments</h1>
+
+<h1 class="center">Coming Soon</h1>
+<img class="pix12 center" src="pix3.jpg" alt="">
 
 </div>
 
